@@ -42,7 +42,7 @@ class Events {
 }
 
 Future<List<Events>> fetchPosts() async {
-  const url = 'https://corum.herokuapp.com/event/json';
+  const url = 'https://corum.up.railway.app/event/json';
 
   final response = await http.get(Uri.parse(url));
   List<dynamic> extractedData = jsonDecode(response.body);

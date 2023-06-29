@@ -90,7 +90,7 @@ class _CardItemState extends State<CardItem> {
                             child: TextButton(
                               onPressed: () async {
                                 await _request.postHtml(
-                                    "http://corum.herokuapp.com/forum/${widget.forum.pk}/delete",
+                                    "http://corum.up.railway.app/forum/${widget.forum.pk}/delete",
                                     null);
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(

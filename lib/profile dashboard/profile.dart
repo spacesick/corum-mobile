@@ -15,7 +15,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   Future<Map<String, dynamic>> fetchData(ConnectNetworkService request) async {
     String uname = request.username;
-    String url = 'https://corum.herokuapp.com/profile/user/' + uname;
+    String url = 'https://corum.up.railway.app/profile/user/' + uname;
 
     try {
       Map<String, dynamic> extractedData = {};

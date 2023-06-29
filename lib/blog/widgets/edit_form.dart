@@ -236,12 +236,12 @@ class _EditFormState extends State<EditForm> {
                       };
                       if (_thumbnail == null) {
                         await _request.postHtml(
-                          'https://corum.herokuapp.com/blog/${widget.post.slug}/edit-post/',
+                          'https://corum.up.railway.app/blog/${widget.post.slug}/edit-post/',
                           _data,
                         );
                       } else {
                         await _request.postMultipart(
-                          'https://corum.herokuapp.com/blog/${widget.post.slug}/edit-post/',
+                          'https://corum.up.railway.app/blog/${widget.post.slug}/edit-post/',
                           _data,
                           _thumbnail!.path,
                         );

@@ -76,7 +76,7 @@ class _EditProfilePageNoPicState extends State<EditProfilePageNoPic> {
                       _formKey.currentState!.save();
                       final response = await http.post(
                           Uri.parse(
-                              "https://corum.herokuapp.com/profile/edit/flutter/nopic"),
+                              "https://corum.up.railway.app/profile/edit/flutter/nopic"),
                           headers: <String, String>{
                             'Content-Type': 'application/json; charset=UTF-8',
                           },

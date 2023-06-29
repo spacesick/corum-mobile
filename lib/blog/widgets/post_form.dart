@@ -238,7 +238,7 @@ class _PostFormState extends State<PostForm> {
                         'body': _body,
                       };
                       await _request.postMultipart(
-                          'https://corum.herokuapp.com/blog/add-post/',
+                          'https://corum.up.railway.app/blog/add-post/',
                           _data,
                           _thumbnail!.path);
 

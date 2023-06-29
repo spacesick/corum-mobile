@@ -12,15 +12,12 @@ class Options {
   final int count;
 
   factory Options.fromJson(Map<String, dynamic> json) {
-    return Options(
-      text: json["text"],
-      count: json["option_count"]
-    );
+    return Options(text: json["text"], count: json["option_count"]);
   }
 }
 
 Future<List<Options>> fetchOptions() async {
-  const url = "https://corum.herokuapp.com/survey/4/get-options/";
+  const url = "https://corum.up.railway.app/survey/4/get-options/";
 
   final response = await http.get(Uri.parse(url));
   List<dynamic> extractedData = jsonDecode(response.body);

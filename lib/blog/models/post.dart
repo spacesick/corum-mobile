@@ -52,7 +52,7 @@ Post parsePost(String json) {
 }
 
 Future<List<Post>> fetchPosts() async {
-  const url = 'https://corum.herokuapp.com/blog/api/posts';
+  const url = 'https://corum.up.railway.app/blog/api/posts';
 
   final response = await http.get(Uri.parse(url));
   List<dynamic> extractedData = jsonDecode(response.body);

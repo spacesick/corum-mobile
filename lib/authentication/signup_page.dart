@@ -235,7 +235,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             if (_formKey.currentState!.validate()) {
                               // Submit to Django server and wait for response
                               final response = await request.postJson(
-                                  "https://corum.herokuapp.com/signupflutter/",
+                                  "https://corum.up.railway.app/signupflutter/",
                                   convert.jsonEncode(<String, String>{
                                     'username': username,
                                     'email': email,

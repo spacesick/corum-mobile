@@ -141,7 +141,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         base64Encode(image!.readAsBytesSync());
                     final String fileName = image!.path.split("/").last;
                     final response = await request.post(
-                        "https://corum.herokuapp.com/profile/edit/flutter",
+                        "https://corum.up.railway.app/profile/edit/flutter",
                         convert.jsonEncode(<String, String>{
                           'firstName': firstName,
                           'lastName': lastName,

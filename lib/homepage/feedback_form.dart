@@ -118,7 +118,7 @@ class _BelajarFormState extends State<BelajarForm> {
                       if (_formKey.currentState!.validate()) {
                         _formKey.currentState!.save();
                         final response = await request.post(
-                            "https://corum.herokuapp.com/feedback/post/",
+                            "https://corum.up.railway.app/feedback/post/",
                             convert.jsonEncode(<String, String>{
                               'message': pesan,
                               'rating': nilai
@@ -126,7 +126,8 @@ class _BelajarFormState extends State<BelajarForm> {
                         if (response['status'] == 'success') {
                           ScaffoldMessenger.of(context)
                               .showSnackBar(const SnackBar(
-                            content: Text("Thanks for submitting your review about our apps"),
+                            content: Text(
+                                "Thanks for submitting your review about our apps"),
                           ));
                           Navigator.pop(context);
                         } else {

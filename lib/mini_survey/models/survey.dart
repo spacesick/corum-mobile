@@ -32,7 +32,7 @@ class Survey {
 }
 
 Future<List<Survey>> fetchSurveys() async {
-  const url = "https://corum.herokuapp.com/survey/get-lists/";
+  const url = "https://corum.up.railway.app/survey/get-lists/";
 
   final response = await http.get(Uri.parse(url));
   List<dynamic> extractedData = jsonDecode(response.body);

@@ -147,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: TextButton(
                           onPressed: () async {
                             final response = await request.login(
-                                "https://corum.herokuapp.com/loginflutter/", {
+                                "https://corum.up.railway.app/loginflutter/", {
                               'username': username,
                               'password': password1,
                             });
@@ -157,7 +157,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 content: Text("Akun telah berhasil masuk!"),
                               ));
                               Navigator.pushReplacementNamed(
-                                  context, MyHomePage.routeName); // buat navigasi ke home
+                                  context,
+                                  MyHomePage
+                                      .routeName); // buat navigasi ke home
                             } else {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(const SnackBar(

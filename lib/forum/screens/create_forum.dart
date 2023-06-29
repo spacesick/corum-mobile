@@ -99,7 +99,7 @@ class _ForumFormState extends State<ForumForm> {
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       final response = await request.postJson(
-                          "http://corum.herokuapp.com/forum/create-flutter",
+                          "http://corum.up.railway.app/forum/create-flutter",
                           convert.jsonEncode(<String, String>{
                             'title': _title,
                             'body': _body,
