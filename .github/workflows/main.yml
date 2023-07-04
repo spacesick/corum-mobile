@@ -2,14 +2,11 @@
 name: Flutter CI/CD
 
 # This workflow is triggered on pushes to the repository.
-
 on:
   push:
     branches:
       - main
       - master
-
-# on: push    # Default will running for every branch.
 
 jobs:
   build:
@@ -25,14 +22,11 @@ jobs:
       # Setup the flutter environment.
       - uses: subosito/flutter-action@v1
         with:
-          channel: "beta" # 'dev', 'alpha', default to: 'stable'
-          # flutter-version: '1.12.x' # you can also specify exact version of flutter
+          channel: 'stable' # 'dev', 'alpha', default to: 'stable'
+          flutter-version: '2.8.1'
 
       # Get flutter dependencies.
       - run: flutter pub get
-
-      # Run widget tests for our flutter project.
-      #    - run: flutter test
       
       # Build apk.
       - run: flutter build apk
